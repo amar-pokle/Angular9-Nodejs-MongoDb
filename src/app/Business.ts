@@ -1,5 +1,5 @@
 export default class Business {
-    person_name: String;
+    client_name: String;
     father_name: String;
     address: String;
     email: String;

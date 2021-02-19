@@ -16,7 +16,7 @@ export class GstAddComponent implements OnInit {
 
   createForm() {
     this.angForm = this.fb.group({
-      person_name: ['', Validators.required ],
+      client_name: ['', Validators.required ],
       father_name: ['', Validators.required ],
       address: ['', Validators.required ],
       email: ['', Validators.required ],
@@ -24,8 +24,8 @@ export class GstAddComponent implements OnInit {
     });
   }
 
-  addBusiness(person_name, father_name, address, email, mobile_no) {
-    this.bs.addBusiness(person_name, father_name, address, email, mobile_no);
+  addBusiness(client_name, father_name, address, email, mobile_no) {
+    this.bs.addBusiness(client_name, father_name, address, email, mobile_no);
     
   }
 

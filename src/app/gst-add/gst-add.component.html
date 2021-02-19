@@ -2,12 +2,12 @@
   <div class="card-body">
     <form [formGroup]="angForm" novalidate>
       <div class="form-group">
-        <label class="col-md-4"> Name</label>
-        <input type="text" class="form-control" formControlName="person_name" #person_name />
+        <label class="col-md-4">Client Name</label>
+        <input type="text" class="form-control" formControlName="client_name" #client_name />
       </div>
-      <div *ngIf="angForm.controls['person_name'].invalid && (angForm.controls['person_name'].dirty || angForm.controls['person_name'].touched)" class="alert alert-danger">
-        <div *ngIf="angForm.controls['person_name'].errors.required">
-           Name is required.
+      <div *ngIf="angForm.controls['client_name'].invalid && (angForm.controls['client_name'].dirty || angForm.controls['client_name'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['client_name'].errors.required">
+          Client Name is required.
         </div>
       </div>
       <div class="form-group">
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="form-group">
-        <button (click)="addBusiness(person_name.value, father_name.value , address.value, email.value, mobile_no.value)"
+        <button (click)="addBusiness(client_name.value, father_name.value , address.value, email.value, mobile_no.value)"
             [disabled]="angForm.pristine || angForm.invalid" 
             class="btn btn-primary">
             Add Details

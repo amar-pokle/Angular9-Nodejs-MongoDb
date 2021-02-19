@@ -10,9 +10,9 @@ export class BusinessService {
 
   constructor(private http: HttpClient) { }
 
-  addBusiness(person_name, father_name, address, email, mobile_no) {
+  addBusiness(client_name, father_name, address, email, mobile_no) {
     const obj = {
-      person_name: person_name,
+      client_name: client_name,
       father_name: father_name,
       address: address,
       email: email,
@@ -36,10 +36,10 @@ export class BusinessService {
             .get(`${this.uri}/edit/${id}`);
     }
 
-  updateBusiness(person_name, father_name, address, email, mobile_no, id) {
+  updateBusiness(client_name, father_name, address, email, mobile_no, id) {
 
     const obj = {
-        person_name: person_name,
+        client_name: client_name,
         father_name: father_name,
         address: address,
         email: email,
